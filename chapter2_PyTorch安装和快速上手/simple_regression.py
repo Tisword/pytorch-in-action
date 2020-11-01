@@ -61,7 +61,7 @@ for batch_idx in count(1):
 
     # 前向传播
     output = F.smooth_l1_loss(fc(batch_x), batch_y)
-    loss = output.data[0]
+    loss = output.item()
 
     # 后向传播
     output.backward()
